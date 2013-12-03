@@ -47,44 +47,119 @@
                 </section>
 
                 <section>
-                    <h2>Introdução</h2>
-					<p>
-						<ul>
-							<li>WLANs são um fácil meio de acesso a internet</li>
-							<!--<ul>-->
-							<li><i>e-commerce</i></li>
-							<li>Redes sociais</li>
-							<li><i>Web-rich applications</i></li>
-								<ul>
-									<li><i>Cloud Computing</i></li>
-									<li><i>HD Video Streaming</i></li>
-									<li><i>Games</i></li>
-								</ul>
-							<!--</ul>-->
-						</ul>
-					</p>
+					<section>
+						<h2>Introdução</h2>
+						<p>
+							<ul>
+								<li>WLAN facilmente conecta vários dispositivos</li>
+								<li>Fácil conexão com a internet</li>
+								<!--<ul>-->
+								<!--<li><i>e-commerce</i></li>-->
+								<!--<li>Redes sociais</li>-->
+								<p></p>
+								<li><i>Web-rich applications</i></li>
+									<ul>
+										<li><i>Cloud Computing</i></li>
+										<li><i>HD Video Streaming</i></li>
+										<li><i>Games</i></li>
+									</ul>
+								<!--</ul>-->
+							</ul>
+						</p>
+					</section>
+					<section>
+						<h2>Então, como todos os dispositivos se comunicam?</h2>
+						<p>
+							<ul>
+								<li class="fragment">WLAN facilmente conecta vários dispositivos</li>
+							</ul>
+						</p>
+					</section>
                 </section>
 
                 <!-- nested vertical slides -->
                 <section>
                     <section>
-						<h2>IEEE 802.11</h2>
+						<h2>IEEE 802.11 ac</h2>
                         <p>
                         <ul>
-                            <li>
-                                <p>Velocidades Gpbs (?)</p>
-                            </li>
+                            <p><li>54Mbps x 1Gbps</li><p>
+							<p><li>Velocidades Gpbs (Será?)</li></p>
+						</ul>
+					<aside class="notes">
+						IEEE: Institute of Electrical and Eletronics Engineers
+					</aside>
+					</section>
+
+                    <section>
+						<h2>Velocidades Gpbs (Será?)</h2>
+						<h3><i>All-at-Once (AaO)</i></h3>
                             <ul>
-                                <li>Alto número de portadoras</li>
-                                <li>Elevado SNR</li>
-								<li>Alto custo de <i>hardware</i></li>
+                                <li class="fragment">Maior número de portadoras = Maior fluxo de dados</li>
+								<img class="fragment" src="images/ChannelWidthVsSNR.png">
+								
+                                <li class="fragment">Porém, elevado SNR</li>
+								<li class="fragment">E alto custo de <i>hardware</i></li>
                             </ul>
-                        </ul>
                         </p>
+						<aside class="notes">
+							Gpbs somente em condições ideais de temperatura e pressão.
+							<p>Dispositivos móveis não conseguem! Grande tamanho físico do hardware!</p>
+						</aside>
                     </section>
                     <section>
-                        <img src="images/PbP-DCFvsAaO-DCF.png">
+						<h2>PbP-DCF</h2>
+						<p>
+                            <ul>
+                                <li>Explora um canal de largura fixa</li>
+								<ul>
+									<li>Menor fluxo de dados</li>
+									<li>Maior número de transmissões</li>
+								</ul>
+								<p><li>Baseado no CSMA/CA</li></p>
+                            </ul>
+						</p>
+						<aside class="notes">
+							CSMA
+							<ul>
+								<li>Escuta o canal;
+								<li>Transmite se estiver livre;</li>
+								<li>Sorteia número aleatório e regressa contagem;</li>
+								<li>Escuta dinovo para transmitir;</li>
+								<li>Aumenta tempo exponencialmente para transmissão;</li>
+								<li>Transmissão com sucesso diminui janela de tempo.</li>
+							</ul>
+						</aside>
                     </section>
+
+					<section>
+						<h2>PbP-DCF vs AaO-DCF</h2>
+
+                        <img src="images/PbPvsAaO.png">
+						<ul>
+							<li class="fragment">Como simular outros cenários?</li>
+						</ul>
+                    </section>
+					<section>
+						<h2>Como simular outros cenários?</h2>
+						<p>
+						<ul>
+							<li>Simulação analítica:</li>
+							<ul>
+								<li>É complexa;</li>
+								<li>Incorpora menos detalhes e mais suposições(JAIN, 1991).</li>
+							</ul>
+							<p>
+							<li class="fragment">Simulador de rede:</li>
+							<ul>
+								<li class="fragment">Implementa todos os protocolos IEEE 802.11;</li>
+								<li class="fragment">Provê ambiente facilmente escalável;</li>
+								<li class="fragment">Porém, PbP-DCF não existe no simulador!</li>
+							</ul>
+							</p>
+						</ul>
+						</p>
+					</section>
                 </section>
 
 
@@ -135,8 +210,8 @@
 						<h2>Análise de Desempenho</h2>
 						<p>
                         <ul>
-							<li>PbP-DCF x CSMA/CA</li>
-							<li>Diferentes cenários reais</li>
+							<li>PbP-DCF x AaO-DCF (CSMA/CA)</li>
+							<li>Diferentes cenários</li>
                         </ul>
 						</p>
 					</section>
@@ -150,6 +225,14 @@
                     <section>
                         <img src="images/Schedule.png">
                     </section>
+                </section>
+
+                <section>
+                        <h1>Referências</h1>
+						<p>All-at-Once or Piece-by-Piece: How to Access Wide Channels in WLANs with Channel Width Diversity?, PP, n. 99. 1-4 p. ISSN 1089-7798.</p>
+						<p>BALDO, N. et al. Validation of the ns-3 ieee 802.11 model using the extreme testbed. In: Proceedings of SIMUTools Conference, 2010. [S.l.: s.n.], 2010.</p>
+						<p>JAIN, R. The art of computer systems performance analysis. [S.l.]: John Wiley & Sons Chichester, 1991.</p>
+						<p>NS-3. NS-3 is a discrete-event network simulator for Internet systems, targeted primarily for research and educational use. 2013</p>
                 </section>
 
 
