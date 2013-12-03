@@ -2,3 +2,5 @@
 
 This is my fork of the reveal.js [![Build Status](https://travis-ci.org/hakimel/reveal.js.png?branch=master)](https://travis-ci.org/hakimel/reveal.js) framework that I'm relying on to do my final cousework paper (TCC) slides at UTFPR-PG.
 I'm using it as a submodule of other git project forking reveal.js just to play safe.
+
+This slides are available through the github project webpage: http://gbc921.github.io/slidesHtml5/
