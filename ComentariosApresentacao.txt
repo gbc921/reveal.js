@@ -32,7 +32,7 @@ X    - Remover cenarios reais e colocar "diferentes cenarios"
 
 -------------------
 
-No texto fazer o link entre CSMA/CA e o AaO
-Deinicao sobre a esolha do simulador
+X No texto fazer o link entre CSMA/CA e o AaO
+? Definicao sobre a esolha do simulador - Último paragrafo da metodologia
 Objetivo especifico como estudo dos padroes de trafego dentro da parte de avaliacao de desempenho
 e.g. e i.e. -> Confirmar se possivel
