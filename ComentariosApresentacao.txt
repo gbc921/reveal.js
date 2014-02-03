@@ -1,0 +1,38 @@
+x-Intro
+x- infraestrutura wlan caseira
+x    Smarthphones e notebooks
+
+x    Como varios dispositivos se comunicam na rede?
+x        Todos seguem um padrao. IEEE (Instutitsoidfjsodifhosh)
+x        As placas
+x        Esse padrao g consegue 54Mb mas o alto numeror portadoras garante 1GBps
+
+x- Velocidade
+x    - Trocar interrogação por (Sera?)
+x        - Somente em laboratório e em condições ideias de temperatura e pressão.
+x        - Elucidar q dispositivos móveis nao conseguem
+x    - Alto numero => Maior numero portadoras
+X    - Padroes do IEEE
+
+X    -Imagem da estrutura de canais
+X        - explicar melhor sobre o numero de portadoras de dados
+X        - dentro do canal existem varias portadoras
+X        - Se vc tem mais portadoras a largura de banda para transmissao eh maior
+X        - explicar CSMA/CA muito brevemente
+
+X    - Depois vem o grafico
+X        - Citar os meios de teste do protocolo (igual introducao)
+
+X-Explicar sobre o simulador
+X    - Implementa todos os protocolos necessarios para realizar um cenario similar ao real
+X    - Este novo protocolo nao existe, entao eh necessario cria-lo
+
+X-Analise de desempenho
+X    - Remover cenarios reais e colocar "diferentes cenarios"
+
+-------------------
+
+No texto fazer o link entre CSMA/CA e o AaO
+Deinicao sobre a esolha do simulador
+Objetivo especifico como estudo dos padroes de trafego dentro da parte de avaliacao de desempenho
+e.g. e i.e. -> Confirmar se possivel
