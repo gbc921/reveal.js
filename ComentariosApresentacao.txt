@@ -12,27 +12,29 @@ x    - Trocar interrogação por (Sera?)
 x        - Somente em laboratório e em condições ideias de temperatura e pressão.
 x        - Elucidar q dispositivos móveis nao conseguem
 x    - Alto numero => Maior numero portadoras
-X    - Padroes do IEEE
+x    - Padroes do IEEE
 
-X    -Imagem da estrutura de canais
-X        - explicar melhor sobre o numero de portadoras de dados
-X        - dentro do canal existem varias portadoras
-X        - Se vc tem mais portadoras a largura de banda para transmissao eh maior
-X        - explicar CSMA/CA muito brevemente
+x    -Imagem da estrutura de canais
+x        - explicar melhor sobre o numero de portadoras de dados
+x        - dentro do canal existem varias portadoras
+x        - Se vc tem mais portadoras a largura de banda para transmissao eh maior
+x        - explicar CSMA/CA muito brevemente
 
-X    - Depois vem o grafico
-X        - Citar os meios de teste do protocolo (igual introducao)
+x    - Depois vem o grafico
+x        - Citar os meios de teste do protocolo (igual introducao)
 
-X-Explicar sobre o simulador
-X    - Implementa todos os protocolos necessarios para realizar um cenario similar ao real
-X    - Este novo protocolo nao existe, entao eh necessario cria-lo
+x-Explicar sobre o simulador
+x    - Implementa todos os protocolos necessarios para realizar um cenario similar ao real
+x    - Este novo protocolo nao existe, entao eh necessario cria-lo
 
-X-Analise de desempenho
-X    - Remover cenarios reais e colocar "diferentes cenarios"
+x-Analise de desempenho
+x    - Remover cenarios reais e colocar "diferentes cenarios"
 
 -------------------
 
-X No texto fazer o link entre CSMA/CA e o AaO
+x No texto fazer o link entre CSMA/CA e o AaO
 ? Definicao sobre a esolha do simulador - Último paragrafo da metodologia
 Objetivo especifico como estudo dos padroes de trafego dentro da parte de avaliacao de desempenho
 e.g. e i.e. -> Confirmar se possivel
+
+-------------------
