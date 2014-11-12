@@ -141,7 +141,7 @@
 					<section>
 						<h2>PbP-DCF vs AaO-DCF</h2>
 
-                        <img src="images/PbPvsAaO.png">
+                        <img src="images/PbPvsAaO_simple.png">
 						<ul>
 							<li class="fragment">Como simular outros cenários?</li>
 						</ul>
@@ -180,22 +180,22 @@
                 </section>
 
                 <section>
+					<!--<section>-->
+					<!--<h2>Trabalhos Relacionados</h2>-->
+					<!--<p>-->
+					<!--<ul>-->
+					<!--<li class="fragment">Paradigma <i>All-at-Once</i>;</li>-->
+					<!--<li class="fragment">Transmissões em canais de largura variáveis;</li>-->
+					<!--<li class="fragment">O paradigma <i>Piece-by-Piece</i>;</li>-->
+					<!--<ul>-->
+					<!--<li class="fragment"><b>O protocolo PbP-DCF</b></li>-->
+					<!--</ul>-->
+					<!--</ul>-->
+					<!--</p>-->
+					<!--</h3>-->
+					<!--</section>-->
 					<section>
-						<h2>Trabalhos Relacionados</h2>
-							<p>
-							<ul>
-								<li class="fragment">Paradigma <i>All-at-Once</i>;</li>
-								<li class="fragment">Transmissões em canais de largura variáveis;</li>
-								<li class="fragment">O paradigma <i>Piece-by-Piece</i>;</li>
-								<ul>
-									<li class="fragment"><b>O protocolo PbP-DCF</b></li>
-								</ul>
-							</ul>
-							</p>
-						</h3>
-					</section>
-					<section>
-						<h2>Paradigma AaO</h2>
+						<h2>O Paradigma All-At-Once</h2>
 						<p>
                         <ul>
 							<li class="fragment">Necessidade de MAC com largura de canais dinâmicos;</li>
@@ -220,7 +220,10 @@
                         <ul>
 							<li>Canal largo = Mais dados -> Maior SNR</br>(PARK, 2011; CHANDRA et al., 2008)</li>
 							<li>Muitos dispositivos + interferências -> Canal estreito (GUMMADI et al., 2007)</li>
-							<aside class="notes">Canal estreito representa subutilização de canais largos. Perde-se a utilidade do AaO</aside>
+							<aside class="notes">
+								Maior SNR necessita ser suprido com melhor qualidade de sinal;</br>
+								Canal estreito representa subutilização de canais largos. Perde-se a utilidade do AaO
+							</aside>
 
 							</br>
 							<div style="width: 100%">
@@ -268,7 +271,9 @@
 						<h2>O protocolo PbP-DCF (QUEIROZ, 2013)</h2>
 						<p>
                         <ul>
-							<img src="images/ChannelWidth.png">
+							<div style="width: 100%">
+								<img style="display: block; margin: 0 auto" src="images/ChannelWidth.png">
+							</div>
 							<li>Divisão do canal mais largo em <i>N</i> canais menores</li>
 							<li>Canal primário = CSMA/CA</li>
 								<ul class="fragment">
@@ -280,28 +285,17 @@
 					<section>
 						<h2>Os resultados do PbP-DCF</h2>
 						<p>
-						<img style="width:80%;height:80%" src="images/PbPvsAaO.png">
+						<img style="width:80%;height:80%" src="images/PbPvsAaO_simple.png">
 						<ul>
 							<li>O desempenho é superior;</li>
 							<li>Apenas 1 ambiente simulado!</li>
                         </ul>
 						</p>
 					</section>
-					<section>
-						<h2>NS-3</h2>
-						<p>
-						<ul>
-							<li>Simulação matemática é atualmente complexa para redes;</li>
-							<li>Emulação/Simulação paralela em tempo real;</li>
-							<li>Wireshark;</li>
-							<li>Expansão através de C++ ou Python;</li>
-							<li>(KHAN; BILAL; OTHMAN, 2013; COMBS, 2010; WEINGARTNER; LEHN; WEHRLE, 2009)
-                        </ul>
-						</p>
-					</section>
                 </section>
 
 				<section>
+					<!--<section>-->
 						<h2>Metodologia</h2>
 							<p>
 							<ul>
@@ -309,32 +303,99 @@
 								<ul>
 									<li class="fragment">Seleção do simulador;</li>
 									<li class="fragment">Implementação do protocolo;</li>
-									<li class="fragment">Análise de desempenho</li>
+									<li class="fragment">Análise de desempenho.</li>
 								</ul>
 							</ul>
 							</p>
 						</h3>
 					</section>
 					<section>
-						<h2>Seleção do Simulador</h2>
-						<p>
-                        <ul>
-							<li>Facilitar a implementação e avaliação de desempenho</li>
-							<li>Implementação integral do IEEE 802.11</li>
-							<li>Variação no modelo de mobilidade e padrões de tráfego</li>
-                        </ul>
-						</p>
+						<section>
+							<h2>Seleção do Simulador</h2>
+							<p>
+							<ul>
+								<li>Facilitar a implementação e avaliação de desempenho</li>
+								<li>Implementação integral do IEEE 802.11</li>
+								<li>Variação no modelo de mobilidade e padrões de tráfego</li>
+							</ul>
+							</p>
+						</section>
+						<section>
+							<h2>NS-3</h2>
+							<p>
+							<ul>
+								<li>Emulação/Simulação paralela em tempo real</li>
+								<li>Wireshark</li>
+								<li>Expansão através de C++ ou Python</li>
+								<li>Facilidade na configuração de diferentes cenários/níveis de carga</li>
+								<!--<li>(KHAN; BILAL; OTHMAN, 2013; COMBS, 2010; WEINGARTNER; LEHN; WEHRLE, 2009)</li>-->
+							</ul>
+							</p>
+						</section>
 					</section>
 					<section>
-						<h2>Implementação do protocolo</h2>
-						<p>
-                        <ul>
-							<li>Estudo e extensão do IEEE 802.11</li>
-                        </ul>
-						</p>
+						<section>
+							<h2>Implementação do protocolo</h2>
+							<p>
+							<ul>
+								<li>Estudo e extensão do IEEE 802.11</li>
+								<li>IEEE 802.11a utilizado -> Largura variáveis de canal</li>
+								<li>2 canais ortogonais 10MHz</li>
+							</ul>
+							</p>
+						</section>
+						<section>
+							<h2>Como os canais se intercalam</h2>
+							<p>
+							<ul>
+								<li>Canal primário (Pc) = CSMA/CA</li>
+								<li>Canal secundário (Sc) = Sem disputa e chance única de Tx</li>
+								</br>
+								<li>ENTRA DIAGRAMA DE EXEMPLO DE TRANSMISSAO</li>
+								<div style="width: 100%">
+								<table style="margin: 0 auto" class="fragment">
+									<tr>
+										<th>Pc:</th>
+										<th>Tx -</th>
+										<th>> ACK</th>
+									</tr>
+									<tr>
+										<th>Sc:</th>
+										<th>&nbsp;</th>
+										<th>PIFS</th>
+										<th>Tx -</th>
+										<th>> ACK...</th>
+									</tr>
+								</table>
+								</div>
+							</ul>
+							</p>
+							<aside class="notes">
+								Congestion Window do ns-3 foi fixado em zero
+							</aside>
+						</section>
+						<section>
+							<h2>O ambiente da simulação</h2>
+							<p>
+							<div style="width: 100%">
+								<img style="display: block; margin: 0 auto" src="images/simulationScenario_bkg.png">
+							</div>
+							</p>
+						</section>
+						<section>
+							<h2>O ambiente da simulação</h2>
+							<p>
+							<ul>
+								<li>Canal de 6Mbps</li>
+								<li>Perda de sinal: PathLoss</li>
+								<li>Cálculo da vazão: Função Throughput</li>
+								<li>Variáveis de ambiente: packetSize, dataRate, stopTime, sampleInterval, pathLoss</li>
+							</ul>
+							</p>
+						</section>
 					</section>
 					<section>
-						<h2>Análise de Desempenho</h2>
+						<h2>Análise de Desempenho (Desempenho)</h2>
 						<p>
                         <ul>
 							<li>PbP-DCF x AaO-DCF (CSMA/CA)</li>
