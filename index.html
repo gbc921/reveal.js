@@ -102,10 +102,9 @@
 						<h3><i>All-at-Once (AaO)</i></h3>
                             <ul>
                                 <li class="fragment">Maior número de portadoras = Maior fluxo de dados</li>
+                                <li class="fragment">Porém, elevado SNR necessário</li>
+								<li class="fragment">Mais antenas = Maior custo de <i>hardware</i></li>
 								<img class="fragment" src="images/ChannelWidthVsSNR.png">
-								
-                                <li class="fragment">Porém, elevado SNR</li>
-								<li class="fragment">E alto custo de <i>hardware</i></li>
                             </ul>
                         </p>
 						<aside class="notes">
@@ -283,6 +282,12 @@
 								</ul>
 					</section>
 					<section>
+						<h2>O protocolo PbP-DCF (QUEIROZ, 2013)</h2>
+							<div style="width: 100%">
+								<img style="display: block; margin: 0 auto" src="images/FluxogramaPbPDCF.png">
+							</div>
+					</section>
+					<section>
 						<h2>Os resultados do PbP-DCF</h2>
 						<p>
 						<img style="width:80%;height:80%" src="images/PbPvsAaO_simple.png">
@@ -338,37 +343,25 @@
 							<h2>Implementação do protocolo</h2>
 							<p>
 							<ul>
-								<li>Estudo e extensão do IEEE 802.11</li>
-								<li>IEEE 802.11a utilizado -> Largura variáveis de canal</li>
-								<li>2 canais ortogonais 10MHz</li>
+								<li>Estudo IEEE 802.11</li>
+								<li><b>Tentativa</b> de utilização do <i>More Data</i></li>
+								<li>Solução = imitar o PbP-DCF</li>
 							</ul>
 							</p>
 						</section>
 						<section>
-							<h2>Como os canais se intercalam</h2>
+							<h2>A estrutura dos canais</h2>
+							<!--<h2>Como os canais se intercalam</h2>-->
 							<p>
 							<ul>
 								<li>Canal primário (Pc) = CSMA/CA</li>
 								<li>Canal secundário (Sc) = Sem disputa e chance única de Tx</li>
-								</br>
-								<li>ENTRA DIAGRAMA DE EXEMPLO DE TRANSMISSAO</li>
-								<div style="width: 100%">
-								<table style="margin: 0 auto" class="fragment">
-									<tr>
-										<th>Pc:</th>
-										<th>Tx -</th>
-										<th>> ACK</th>
-									</tr>
-									<tr>
-										<th>Sc:</th>
-										<th>&nbsp;</th>
-										<th>PIFS</th>
-										<th>Tx -</th>
-										<th>> ACK...</th>
-									</tr>
-								</table>
-								</div>
 							</ul>
+							</p>
+							<p>
+							<div style="width: 100%">
+								<img style="display: block; margin: 0 auto" src="images/channelTransmissionExample.png">
+							</div>
 							</p>
 							<aside class="notes">
 								Congestion Window do ns-3 foi fixado em zero
@@ -386,10 +379,29 @@
 							<h2>O ambiente da simulação</h2>
 							<p>
 							<ul>
-								<li>Canal de 6Mbps</li>
+								<li>IEEE 802.11a utilizado -> Largura variáveis de canal</li>
+								<li>2 canais ortogonais 10MHz</li>
+								<li>Canal de 6Mbps adhoc</li>
+							</ul>
+							</p>
+						</section>
+						<section>
+							<h2>O ambiente da simulação</h2>
+							<p>
+							<ul>
 								<li>Perda de sinal: PathLoss</li>
+								<ul>
+									<li>Define a perda de sinal baseado na distância</li>
+									<li>'n' é expoente da função log</li>
+								</ul>
 								<li>Cálculo da vazão: Função Throughput</li>
+								<ul>
+									<li>Tamanho dos pacotes + headers</li>
+									<li>Contagem do nó 1, em todos os canais</li>
+								</ul>
+								<p>
 								<li>Variáveis de ambiente: packetSize, dataRate, stopTime, sampleInterval, pathLoss</li>
+								</p>
 							</ul>
 							</p>
 						</section>
